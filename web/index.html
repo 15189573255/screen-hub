@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Screen Hub</h1>
+        <span id="status" class="status disconnected">disconnected</span>
+    </header>
+
+    <!-- Grid View -->
+    <div id="grid-view">
+        <div id="agent-grid"></div>
+        <div id="empty-msg">No agents connected</div>
+    </div>
+
+    <!-- Control View (single agent fullscreen) -->
+    <div id="control-view" style="display:none;">
+        <div id="control-bar">
+            <button id="btn-back">Back to Grid</button>
+            <span id="control-agent-name"></span>
+            <span id="control-fps">0 FPS</span>
+        </div>
+        <canvas id="remote-canvas"></canvas>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
